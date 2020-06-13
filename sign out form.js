@@ -1,5 +1,18 @@
 <!--
-//year setting
+
+  //아이디 중복확인
+  function userId()	{
+    var userid = document.getElementById("userid").value;
+    console.log(userid);
+    if(userid == null || userid =="") {
+      alert("아이디 입력은 필수 입니다.");
+    }
+    else {
+      alert(userid + "은(는) 사용 가능합니다.");
+    }
+ }
+
+//생년월일 select box
  function appendYear() {
    var date = new Date();
    var year = date.getFullYear();
@@ -34,4 +47,6 @@
   appendMonth();
   appendDay();
  }
+
+
 //-->

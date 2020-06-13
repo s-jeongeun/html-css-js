@@ -3,19 +3,19 @@
 <head>
  <link type="text/css" rel="stylesheet" href="sign out form.css">
  <script type="text/javascript" src="sign out form.js"></script>
- <title>회원 가입</title>
+ <title>회원가입</title>
 </head>
 <body>
  <form name="sign out" method="post" action="">
   <table border="1">
    <tr>
-    <td colspan=2 height="50"><b>일반회원 가입신청</b></td>
+    <td colspan=2 height="50"><b>회원가입</b></td>
    </tr>
    <tr>
     <td width="150" align="center">아이디</td>
     <td width="500">
-      <input name="identity" type="text" size="20" />
-      <input type="button" name="button" value="중복확인" />
+      <input id="userid" name="identity" type="text" size="20" />
+      <input type="button" onClick="userId()" value="중복확인" />
     </td>
    </tr>
    <tr>
@@ -47,19 +47,15 @@
     </td>
    </tr>
    <tr>
-    <td align="center">핸드폰번호</td>
+    <td align="center">전화번호</td>
     <td>
-      <select>
-       <option>=앞번호=</option>
-      </select>
-       - <input name="phnum" type="text" size="7" maxlength="4" />
-       - <input name="phnum" type="text" size="7" maxlength="4" />
+      <input name="phnum" type="tel" pattern="\d{3,4}-\d{4}-\d{4}" />
     </td>
    </tr>
    <tr>
     <td align="center">이메일주소</td>
     <td>
-      <input name="email" type="text" size="20" /> @
+      <input name="email" type="text" size="10" /> @
       <select id="email">
        <option>=이메일주소=</option>
      </select>
