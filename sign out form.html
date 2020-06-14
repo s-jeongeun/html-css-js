@@ -24,11 +24,14 @@
    </tr>
    <tr>
     <td align="center">비밀번호</td>
-    <td><input name="password" type="password" size="20" minlength="8" /></td>
+    <td><input id="pw1" name="password" type="password" size="20" minlength="8" onchange="checkPW()" /></td>
    </tr>
    <tr>
     <td align="center">비밀번호확인</td>
-    <td><input name="password" type="password" size="20" minlength="8" /></td>
+    <td>
+      <input id="pw2" name="password" type="password" size="20" minlength="8" onchange="checkPW()" />
+      <span id="check"></span>
+    </td>
    </tr>
    <tr>
     <td align="center">생년월일</td>
