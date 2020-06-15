@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>숫자 맞히기</title>
+<script language="JavaScript">
+<!--
+	rannum=parseInt((Math.random()*100)+1);
+	count=1;
+	
+	function updownNum()	{
+		number1=document.getElementById("entNum");
+			if(number1 == "" || number1 == null)	{ 
+				alert('숫자를 입력하세요');
+			}
+			if(number1 == rannum)	{
+				document.getElementById("area").innerHTML="정답입니다.";
+			}
+			else	{
+				if(rannum>number1)	{ 
+					document.getElementById("result").innerHTML=number1+"보다 큽니다.";
+
+				}
+				else	{  
+					document.getElementById("result").innerHTM=number1+"보다 작습니다.";
+
+				}
+			}
+			document.getElementById("guesses").value=("시도한 횟수는 "+(count++)+"번 입니다.");		
+	}
+//-->
+</script>	
+</head>
+<body>
+	<form>
+		<table>
+			<tr><h1>숫자 맞히기 게임</h1></tr>
+			<tr>
+				<p>1에서 100 사이의 수를 입력하세요.</p>
+				<input type="text" id="entNum" maxlength="3">
+				<input type="button" value="확인" onclick="updownNum()">
+				<input type="reset" value="다시">
+			</tr>
+			<tr><div id="result"></div></tr>
+			<tr><div id="area"></div></tr>
+			
+		</table>
+	</form>	
+</body>
+</html>
