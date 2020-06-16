@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test 2</title>
+<script>
+<!--
+	function checkhwp()	{
+		var fname = document.getElementById("name").value;
+		fname = fname.slice(fname.indexOf(".") + 1).toLowerCase();
+
+		if(fname == "hwp")	{
+			document.getElementById("hwp").innerHTML = "확장자가 hwp인 파일입니다."
+		}
+		else	{
+			document.getElementById("hwp").innerHTML = "확장자가 hwp인 파일이 아닙니다."
+		}
+	}
+
+	function birth() {
+		var jumin = document.getElementById("idnum").value;
+		var yy =  jumin.substring(0,2);
+		var mm = jumin.substring(2,4);
+		var dd = jumin.substring(4,6);
+		var gender = jumin.substring(7,8);	
+
+		if(gender == 1 || gender == 2)	{
+			alert("생년월일은 19" + yy +"년 " + mm + "월 " + dd + "일 입니다.")
+		}
+		else	{
+			alert("생년월일은 20" + yy +"년 " + mm + "월 " + dd + "일 입니다.")
+		}
+	}
+
+	function checknum()	{
+		var num = document.getElementById("ininum").value;
+		var num2 = new Array("010", "011", "017", "016", "018", "019");
+		var num3 = num2.includes(num);	
+
+		if(num3 == true)	{
+			alert("국번은 " + num + "입니다.")
+		}
+		else	{
+			alert("해당 국번은 잘못된 국번입니다.")
+		}
+	}
+	
+	function checkgender()	{
+		var radio_btn = document.getElementByName("gender_btn");
+		var radio_cnt = document.getElementByName("gender_btn").length;
+
+		for(var i = 0; i < radio_cnt; i++)	{
+			if(radio_btn[i].checked == true)	{
+				alert(radio_btn[i].value);
+			}
+		}
+		
+		if(radio_btn_check == 0)	{
+			alert("성별은 선택해주세요")
+			return;
+		}
+	}
+	
+
+//-->
+</script>
+</head>
+<body>
+	<h1>Javascript 연습문제 2</h1>
+	<ol>
+		<li><p>파일명을 입력해서 버튼을 눌러 hwp파일인지 확인하고 p태그 사이에 결과를 출력하시오.</p>
+			<p>
+				<input type="text" id="name">
+				<input type="button" onClick="checkhwp()" value="클릭">
+			</p>
+			<p id=hwp></p>
+		</li>
+		<li><p>주민번호(13자리)를 입력받아서 생년월일을 추출하여 alert로 출력하시오.</p>
+			<p>
+				<input type="text" id="idnum" minlength="13" maxlength="13">
+				<input type="button" onClick="birth()" value="클릭">
+			</p>
+		</li>
+		<li><p>핸드폰번호를 입력받아서 국번이 010,011,017,016,018,019인지 체크하는 프로그램을 작성하시오. input text는 3개 사용.</p>
+			<p>
+				<input type=text id="ininum"> - <input type=text> - <input type=text>
+				<input type="button" onClick="checknum()" value="확인">
+			</p>
+		</li>
+		<li><p>남성, 여성 중 한 개만 선택하도록 radio button을 만들고, 버튼을 누르면 선택한 값이 alert로 출력되도록 작성하십시오.</p>
+			<p>
+				<input type="radio" name="gender_btn" value="man" />남성
+				<input type="radio" name="gender_btn" value="woman" />여성
+				<input type="button" onClick="checkgender()" value="선택">
+			</p>
+		</li>
+		<li><p>운동, 독서, 영화감상을 checkbox로 만들고, 선택한 값(복수)을 p태그에 출력하는 프로그램을 작성하시오.</p>
+			<p>
+				<input type="checkbox" id="exercise" />운동
+				<input type="checkbox" id="book" />독서
+				<input type="checkbox" id="movie" />영화감상
+				<input type="button" onClick="checkhobby()" value="확인">
+			</p>
+			<p id="hobbylist"></p>
+		</li>
+	</ol>
+</body>
+</html>
